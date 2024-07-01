@@ -177,7 +177,7 @@ function renderFlowers(config, flowers, selected, options) {
   flowers.map((item) => {
     const selectedCounter =
       selected?.filter((f) => f.item.id === item.id).length ?? 0
-    const flower = getFlowerElementToRender(item, selectedCounter, options)
+    const flower = getStoreElementToRender(item, selectedCounter, options)
     config.flowersSection.appendChild(flower)
   })
 }
@@ -187,7 +187,7 @@ function renderGifts(config, gifts, selected, options) {
   gifts.map((item) => {
     const selectedCounter =
       selected?.filter((f) => f.item.id === item.id).length ?? 0
-    const gift = getGiftElementToRender(item, selectedCounter, options)
+    const gift = getStoreElementToRender(item, selectedCounter, options)
     config.giftsSection.appendChild(gift)
   })
 }
@@ -293,62 +293,7 @@ function getCaretItemToRender({ item }, selectedCounter, options) {
   return root
 }
 
-function getFlowerElementToRender(item, selectedCounter, options) {
-  if (item == null) {
-    console.error('Не удалось отрисовать букет')
-    return
-  }
-
-  const root = document.createElement('div')
-  root.className = 'store_item'
-  const content = document.createElement('div')
-  content.classList.add('store_item_content')
-
-  const image = document.createElement('img')
-  image.classList.add('store_item_image')
-  image.setAttribute('src', item.imageUrl)
-
-  const description = document.createElement('p')
-  description.classList.add('store_item_description')
-  description.innerText = item.description
-
-  const controls = document.createElement('div')
-  controls.classList.add('store_item_controls')
-
-  const price = document.createElement('span')
-  price.innerText = `Цена: ${item.price}₽`
-
-  const buttons = document.createElement('div')
-  buttons.classList.add('store_item_buttons')
-  if (selectedCounter < 1) {
-    const addButton = document.createElement('button')
-    addButton.classList.add('store_item_button')
-    addButton.innerText = `Добавить`
-    addButton.addEventListener('click', () => options?.onAdd(item))
-    buttons.append(addButton)
-  } else {
-    const counter = document.createElement('span')
-    counter.classList.add('store_item_counter')
-    counter.innerText = selectedCounter
-    const plusButton = document.createElement('button')
-    const minusButton = document.createElement('button')
-    plusButton.classList.add('store_item_plus_button')
-    minusButton.classList.add('store_item_minus_button')
-    plusButton.innerText = `+`
-    minusButton.innerText = `-`
-    plusButton.addEventListener('click', () => options?.onAdd(item))
-    minusButton.addEventListener('click', () => options?.onRemove(item))
-    buttons.append(minusButton, counter, plusButton)
-  }
-
-  content.append(image, description)
-  controls.append(price, buttons)
-  root.append(content, controls)
-
-  return root
-}
-
-function getGiftElementToRender(item, selectedCounter, options) {
+function getStoreElementToRender(item, selectedCounter, options) {
   if (item == null) {
     console.error('Не удалось отрисовать букет')
     return

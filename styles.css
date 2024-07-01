@@ -376,8 +376,8 @@ body {
 }
 
 .store_item_button:hover,
-.store_item_minus_button:hover,
-store_item_minus_button:hover {
+.store_item_plus_button:hover,
+.store_item_minus_button:hover {
   background-color: #543a6c;
 }
 
