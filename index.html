@@ -1,0 +1,168 @@
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Serif&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Vina+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/styles.css">
+	<title>Доставка букетов</title>
+</head>
+
+<body>
+	<div class="sticky_header">
+		<header class="root header">
+			<nav class="navigation">
+				<a href="#about">О НАС</a>
+				<a href="#bouquets">БУКЕТЫ</a>
+				<a href="#gifts">ПОДАРКИ</a>
+				<a href="#reasons">ПОВОДЫ</a>
+				<a href="#contacts">КОНТАКТЫ</a>
+			</nav>
+
+			<div class="caret_button" tabindex="-1">
+				<span id="caret_counter">0</span>
+				<div class="caret_icon"></div>
+
+				<div class="caret_wrapper">
+					<div class="caret_popup" id="caret_container">
+						<div>Корзина пуста</div>
+
+						<div class="caret_items">
+							<div class="caret_item">
+								<div class="caret_item_img"></div>
+								<div class="caret_item_controls">
+									<div class="caret_item_price">0</div>
+									<div class="caret_item_buttons">
+										<button class="caret_item_minus_button">-</button>
+										<span>2</span>
+										<button class="caret_item_plus_button">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="caret_item_price_total">Итого: 0</div>
+
+
+						<div class="caret_controls">
+							<button class="caret_clear_button">Очистить корзину</button>
+							<button class="caret_order_button">Оформить заказ</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div class="root">
+		<div class="hero">
+			<div class=" hero_content">
+				<div class="hero_text">
+					<h2 class="hero_subtitle">ДОСТАВКА</h2>
+					<h1 class="hero_title">БУКЕТОВ</h1>
+					<h2 class="hero_subtitle">Прямо на космической станции!</h2>
+				</div>
+
+				<a href="#about" class="hero_button"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="root" id="about">
+		<section class="about">
+			<div class="about_content">
+				<div class="about_text">
+					<h2 class="about_title">ПАРА СЛОВ О НАС</h2>
+
+					<p>
+						Добро пожаловать в <span style="color: #b43e8f;"> первый в истории </span> флористический
+						сервис доставки букетов на космической станции!
+					</p>
+
+					<p>
+						<span style="color: #b43e8f;"> Наши букеты </span> – это не просто цветы, а настоящее
+						произведение искусства, созданное <span style="color: #b43e8f;"> с любовью и вниманием
+						</span>к каждой детали.
+
+					</p>
+
+					<p>
+						Ваше удовлетворение – наш главный приоритет.
+					</p>
+
+					<p>
+						Присоединяйтесь к <span style="color: #b43e8f;">нашей цветочной миссии</span> и позвольте
+						себе наслаждаться красотой и ароматом земных цветов даже на орбите!
+					</p>
+				</div>
+
+				<div class="about_images">
+					<div class="about_images_item">
+						<img src="./images/космонавт с букетом.jfif" alt="">
+					</div>
+
+					<div class="about_images_item">
+						<img src="./images/космонавт2.jfif" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="divider"></div>
+
+	<div id="bouquets" class="menu">
+		<h2 class="menu_title">НАШИ БУКЕТЫ</h2>
+
+		<div class="store_container" id="flowers_section"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div id="gifts" class="gifts menu">
+		<h2 class="menu_title">КАТАЛОГ ПОДАРКОВ</h2>
+		<div class="store_container" id="gifts_section"></div>
+	</div>
+
+	<div id="reasons" class="reasons">
+		<h2 class="reasons_title">ОТЗЫВЫ ПОКУПАТЕЛЕЙ</h2>
+
+		<div class="gallery-container">
+			<div class="gallery">
+				<div class="gallery-slider">
+					<img src="./images/отзыв1.jfif" />
+					<img src="./images/отзыв2.jfif" />
+					<img src="./images/отзыв3.jfif" />
+					<img src="./images/отзыв4.jfif" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<section id="contacts" class="contacts">
+		<div class="contacts_content">
+
+			<h2 class="contacts_title">НАШИ КОНТАКТЫ</h2>
+
+			<div class="contacts_info">
+				<a href="tel: +70000000000"> +7(777)777-77-77</a><br />
+				<a href="mailto: flowers@space.place">flowers@space.place</a>
+			</div>
+
+			<a class="up_button" href="#">
+				НАВЕРХ
+			</a>
+		</div>
+	</section>
+
+	<script src="/script.js"></script>
+</body>
+
+</html>
